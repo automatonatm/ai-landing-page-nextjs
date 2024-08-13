@@ -2,32 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
+  font-family: var(--font-dm-sans);
+}
+
+/* Linear Gradient */
+
+.bg-gradient-1 {
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    90deg,
+    #feecff 0%,
+    #fecaff 11.71%,
+    #feb5ff 26.8%,
+    #ffdbe7 40.18%,
+    #fff4d6 49.22%,
+    #f3fcd7 58.71%,
+    #d2f5ee 71.29%,
+    #c3efff 84.44%,
+    #fbefff 100%
+  );
+}
+
+.nav-gradient {
+  background: linear-gradient(
+    89.43deg,
+    #f87bff 0.48%,
+    #fb92cf 24.31%,
+    #ffdd9b 48.21%,
+    #c2f0b1 72.62%,
+    #2fd8fe 99.52%
+  );
+}
+
+.hero-gradient {
+  background: linear-gradient(
+    180deg,
+    #000000 0%,
+    #200d42 34.22%,
+    #4f21a1 64.9%,
+    #a46edb 81.78%
+  );
+}
+
+.ecipse {
+  border: 1px solid #be9ae7;
+
+  background: radial-gradient(
+    401.15% 103.55% at 50% 100%,
+    #000000 69.36%,
+    #9c67f4 100%
+  );
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .p-body-tag {
+    @apply text-[14px] leading-[18px];
+  }
+  .here-text-gradient {
+    @apply bg-[linear-gradient(89.43deg,#f87bff_0.48%,#fb92cf_24.31%,#ffdd9b_48.21%,#c2f0b1_72.62%,#2fd8fe_99.52%)] bg-clip-text text-transparent;
+  }
+  .hero-h1 {
+    @apply text-center text-[54px] font-semibold leading-[50px] tracking-[-2.5%] text-white md:text-[154px] md:leading-[120px] lg:text-[165px] lg:font-bold lg:leading-[125px] lg:tracking-[-7.5%];
+  }
+  .p-large {
+    @apply font-inter text-center text-[22px] font-normal leading-[31px] tracking-[-3.6%] text-white;
   }
 }
