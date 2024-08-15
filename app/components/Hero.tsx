@@ -8,8 +8,8 @@ import messageImage from "@/app/assets/message.png";
 
 export const Hero = () => {
   return (
-    <div className="hero-gradient relative overflow-clip py-[64px] text-white">
-      <div className="ecipse absolute left-1/2 top-[calc(100%-96px)] h-[359px] w-[909px] -translate-x-1/2 rounded-[100%] sm:h-[1014px] sm:w-[1924px] lg:h-[100%] lg:w-[2344px]"></div>
+    <div className="hero-gradient relative overflow-clip py-[64px] ">
+      <div className="ecipse absolute left-1/2 top-[calc(100%-96px)] h-[359px] w-[909px] -translate-x-1/2 rounded-[100%] sm:h-[1014px] sm:w-[1924px] lg:h-[1200px] lg:w-[2400px]"></div>
       <div className="container relative">
         <div className="flex flex-col items-center justify-center gap-8">
           <div className="flex items-center justify-center">
@@ -42,14 +42,14 @@ export const Hero = () => {
               alt="cursor"
               height={200}
               width={200}
-              className="absolute -left-[20%] top-1/2 hidden md:block"
+              className="absolute -left-[20%] top-1/2 hidden md:inline"
             />
             <Image
               src={messageImage}
               alt="message"
               height={200}
               width={200}
-              className="absolute right-[-23%] top-[25%] hidden md:block"
+              className="absolute right-[-23%] top-[25%] hidden md:inline"
             />
           </div>
 

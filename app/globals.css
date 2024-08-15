@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: var(--font-dm-sans);
-}
-
 /* Linear Gradient */
 
 .bg-gradient-1 {
@@ -65,6 +61,11 @@ body {
     @apply text-center text-[54px] font-semibold leading-[50px] tracking-[-2.5%] text-white md:text-[154px] md:leading-[120px] lg:text-[165px] lg:font-bold lg:leading-[125px] lg:tracking-[-7.5%];
   }
   .p-large {
-    @apply font-inter text-center text-[22px] font-normal leading-[31px] tracking-[-3.6%] text-white;
+    @apply text-center font-inter text-[22px] font-normal leading-[31px] tracking-[-3.6%] text-white;
+  }
+  .logo-ticker {
+    @apply before:absolute before:left-0 before:top-0 before:h-full before:w-5 before:bg-[linear-gradient(to_right,#000,rgb(0,0,0,0))] before:content-[''];
+
+    @apply after:absolute after:right-0 after:top-0 after:h-full after:w-5 before:bg-[linear-gradient(to_left,#000,rgb(0,0,0,0))] after:content-[''];
   }
 }

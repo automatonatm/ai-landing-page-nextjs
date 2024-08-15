@@ -13,8 +13,8 @@ const config: Config = {
         center: true,
       },
       fontFamily: {
-        dmSans: ["var(--font-dm-sans)", "sans-serif"],
-        inter: ["var(--font-inter)", "sans-serif"],
+        dmSans: "var(--font-dm-sans)",
+        inter: "var(--font-inter)",
       },
     },
   },

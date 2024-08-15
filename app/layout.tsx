@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(inter.variable, dmSans.variable, "antialiased")}>
+      <body className={clsx(dmSans.variable, inter.variable, "antialiased")}>
         {children}
       </body>
     </html>
