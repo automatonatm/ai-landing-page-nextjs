@@ -50,7 +50,15 @@
   );
 }
 
+.product-showcase-shadow {
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.65);
+}
+
 @layer utilities {
+  .h2-bold {
+    @apply text-center text-[32px] font-semibold sm:text-[54px] sm:font-bold leading-[60px] sm:tracking-[-6%];
+  }
+
   .p-body-tag {
     @apply text-[14px] leading-[18px];
   }
@@ -66,6 +74,11 @@
   .logo-ticker {
     @apply before:absolute before:left-0 before:top-0 before:h-full before:w-5 before:bg-[linear-gradient(to_right,#000,rgb(0,0,0,0))] before:content-[''];
 
-    @apply after:absolute after:right-0 after:top-0 after:h-full after:w-5 before:bg-[linear-gradient(to_left,#000,rgb(0,0,0,0))] after:content-[''];
+    @apply before:bg-[linear-gradient(to_left,#000,rgb(0,0,0,0))] after:absolute after:right-0 after:top-0 after:h-full after:w-5 after:content-[''];
+  }
+
+
+  .gradient-to-bottom {
+    @apply bg-gradient-to-b from-black to-[#5D2CAB];
   }
 }
