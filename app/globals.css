@@ -56,7 +56,7 @@
 
 @layer utilities {
   .h2-bold {
-    @apply text-center text-[32px] font-semibold sm:text-[54px] sm:font-bold leading-[60px] sm:tracking-[-6%];
+    @apply text-center text-[32px] font-semibold leading-[60px] sm:text-[54px] sm:font-bold sm:tracking-[-6%];
   }
 
   .p-body-tag {
@@ -77,8 +77,11 @@
     @apply before:bg-[linear-gradient(to_left,#000,rgb(0,0,0,0))] after:absolute after:right-0 after:top-0 after:h-full after:w-5 after:content-[''];
   }
 
-
   .gradient-to-bottom {
     @apply bg-gradient-to-b from-black to-[#5D2CAB];
+  }
+
+  .faq-gradient {
+    @apply bg-gradient-to-b from-[#5D2CAB] to-black;
   }
 }

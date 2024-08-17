@@ -26,9 +26,9 @@ const Features = () => {
   return (
     <div className="bg-black py-[72px]">
       <div className="container">
-        <div className="flex flex-col gap-5 items-center max-w-xl mx-auto">
+        <div className="mx-auto max-w-xl space-y-5">
           <h2 className="h2-bold text-white">Every thing you need</h2>
-          <p className=" text-[22px] font-normal leading-[31px] tracking-[-3.6%] text-white text-center">
+          <p className="text-center text-[22px] font-normal leading-[31px] tracking-[-3.6%] text-white">
             Enjoy customizable lists, team work tools, and smart tracking all in
             one place. Set tasks, get reminders, and see your progress simply
             and quickly.
