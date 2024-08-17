@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 import { acme, apex, echo, pulse, quantom } from "@/app/assets/logos";
 
@@ -20,8 +22,17 @@ const LogoTicker = () => {
             Trusted by the world’s most innovative teams
           </h2>
 
-          <div className="relative overflow-hidden logo-ticker">
-            <div className="flex gap-16">
+          <div className="logo-ticker relative overflow-hidden">
+            <motion.div
+              transition={{
+                duration: 15,
+                ease: "linear",
+                repeat: Infinity,
+              }}
+              initial={{ translateX: 0 }}
+              animate={{ translateX: "-50%" }}
+              className="flex flex-none gap-16 pr-16"
+            >
               {images.map(({ src, alt }) => (
                 <Image
                   src={src}
@@ -30,7 +41,16 @@ const LogoTicker = () => {
                   key={alt}
                 />
               ))}
-            </div>
+
+              {images.map(({ src, alt }) => (
+                <Image
+                  src={src}
+                  alt={alt}
+                  className="h-8 w-auto flex-none"
+                  key={alt}
+                />
+              ))}
+            </motion.div>
           </div>
         </div>
       </div>

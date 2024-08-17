@@ -72,9 +72,9 @@
     @apply text-center font-inter text-[22px] font-normal leading-[31px] tracking-[-3.6%] text-white;
   }
   .logo-ticker {
-    @apply before:absolute before:left-0 before:top-0 before:h-full before:w-5 before:bg-[linear-gradient(to_right,#000,rgb(0,0,0,0))] before:content-[''];
+    @apply before:absolute before:left-0 before:top-0 before:h-full before:w-5 before:bg-[linear-gradient(to_right,#000,rgb(0,0,0,0))] before:content-[''] before:z-10;
 
-    @apply before:bg-[linear-gradient(to_left,#000,rgb(0,0,0,0))] after:absolute after:right-0 after:top-0 after:h-full after:w-5 after:content-[''];
+    @apply after:bg-[linear-gradient(to_left,#000,rgb(0,0,0,0))] after:absolute after:right-0 after:top-0 after:h-full after:w-5 after:content-[''];
   }
 
   .gradient-to-bottom {
