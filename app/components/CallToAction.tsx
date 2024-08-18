@@ -1,22 +1,39 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 import helix2 from "@/app/assets/images/helix2.png";
 import emojistar from "@/app/assets/images/emojistar.png";
 import Image from "next/image";
+import { useScroll, useTransform, motion } from "framer-motion";
 
 const CallToAction = () => {
+  const contanerRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: contanerRef,
+    offset: ["start end", "end end"],
+  });
+
+  const translateY = useTransform(scrollYProgress, [0, 1], [40, -40]);
+
   return (
     <div className="bg-black py-[72px] sm:py-24">
-      <div className="container relative max-w-xl">
-        <Image
-          src={helix2}
-          alt="helix2"
-          className="absolute left-[calc(100%+36px)] top-6 hidden md:inline"
-        />
-        <Image
-          src={emojistar}
-          alt="emojistar"
-          className="absolute -top-[120px] right-[calc(100%+24px)] hidden md:inline"
-        />
+      <div className="container relative max-w-xl" ref={contanerRef}>
+        <motion.div style={{ translateY }}>
+          <Image
+            src={helix2}
+            alt="helix2"
+            className="absolute left-[calc(100%+36px)] top-6 hidden md:inline"
+          />
+        </motion.div>
+
+        <motion.div style={{ translateY }}>
+          <Image
+            src={emojistar}
+            alt="emojistar"
+            className="absolute -top-[120px] right-[calc(100%+24px)] hidden md:inline"
+          />
+        </motion.div>
+
         <div className="mx-auto flex flex-col items-center justify-center gap-5 text-center">
           <h2 className="text-5xl font-bold tracking-tighter text-white">
             Get instant access

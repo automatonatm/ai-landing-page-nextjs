@@ -2,6 +2,7 @@
 import clsx from "clsx";
 import Image from "next/image";
 import React from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const items = [
   {
@@ -37,6 +38,7 @@ const AccordionItem = ({ question, answer }: AccordionProps) => {
     <div className="border-b border-white/30 py-5 text-white">
       <div className="flex items-center" onClick={() => setIsOpen(!isOpen)}>
         <span className="flex-1 text-lg font-bold">{question}</span>
+
         {isOpen ? (
           <Image
             src="/assets/icons/minus.svg"
@@ -53,14 +55,30 @@ const AccordionItem = ({ question, answer }: AccordionProps) => {
           />
         )}
       </div>
-      <p
-        className={clsx("mt-4", {
-          hidden: !isOpen,
-          "": isOpen,
-        })}
-      >
-        {answer}
-      </p>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.p
+            initial={{
+              opacity: 0,
+              height: 0,
+              marginTop: 0,
+            }}
+            animate={{
+              opacity: 1,
+              height: "auto",
+              marginTop: "16px",
+            }}
+            exit={{
+              opacity: 0,
+              height: 0,
+              marginTop: 0,
+            }}
+           
+          >
+            {answer}
+          </motion.p>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
