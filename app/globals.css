@@ -50,6 +50,10 @@
   );
 }
 
+.mask-image {
+  mask-image: radial-gradient(100px 100px at 0px 0px, black, transparent);
+}
+
 .product-showcase-shadow {
   box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.65);
 }
